@@ -1,0 +1,14 @@
+Ok - here the steps to follow for grabbing & smushing your livejournal posts into one big doc
+1) Log into LJ then go to here: https://www.livejournal.com/export.bml
+2) enter month/year to download, choose csv format, and select the fields you want (I ended up ditching itemid, logtime, security, allowmask, current_music, current_mood when I compiled the entries with R but ymmv if you want those to get bundled in as well). 
+--> This scoops up all entries from that month into one csv file. 
+--> Note - you'll need to do this for EVERY month of EVERY year you want to archive. 
+--> I know, it's painful, and there are webcrawler tools that I'm still in the process of learning/figuring out when I have time that I'm hoping to streamline the process. But for now, that's what you need to do, and the resultant ungainly pile of csv files is what my r code works with.
+3) Use the livejournalTextScrape.R code in this repos to smush it all together. 
+--> mod the code as needed to set your working directory where the csv files live (this will be where the eventual text file gets default kicked out too), and change the csv file names accordingly. It's brute force, it's ugly - sometime this summer imma elegant this shit up a bit and loop things rather than just one after the other, but hey - R coding newb and this was just basically a first-go proof-of-concept so it's what you get for now!
+--> I should also clean up some superfluous code and add some better comments, will get to that when I can!
+4) open the txt file you create at the end in MS word and impose some kind of order
+--> e.g. I stripped out the header line, shrunk the text size, and added page #s (holy crap that's a lot of pages of idiot ramblings!)
+--> sometime soon imma work on imposing some more regular expression edits and tweaks/formatting on the r side of things before kicking to text file!
+
+Happy archiving! Run with and improve on this code freely and feel free to leave comments/suggs!
