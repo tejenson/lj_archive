@@ -1,4 +1,4 @@
-Ok - here the steps to follow for grabbing & smushing your livejournal posts into one big doc
+Ok - here are the steps to follow for grabbing & smushing your livejournal posts into one big doc
 1) Log into LJ then go to here: https://www.livejournal.com/export.bml
 2) enter month/year to download, choose csv format, and select the fields you want (I ended up ditching itemid, logtime, security, allowmask, current_music, current_mood when I compiled the entries with R but ymmv if you want those to get bundled in as well). 
 --> This scoops up all entries from that month into one csv file. 
